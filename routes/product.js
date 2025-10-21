@@ -436,7 +436,7 @@ router.post('/admin/product/deleteimage', restrict, checkAccess, async (req, res
     // Check for main image being deleted
     if(req.body.productImage === product.productImage){
         // set the productImage to null
-        await db.products.updateOne({ _id: getId(req.body.product_id) }, { $set: { productImage: null } }, { multi: false });
+        await db.products.updateOne({ _id: { $eq: getId(req.body.product_id) } }, { $set: { productImage: null } }, { multi: false });
     }
 
     // Check if image is a URL
