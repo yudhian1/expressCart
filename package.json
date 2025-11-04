@@ -122,6 +122,7 @@
     "url": "https://github.com/mrvautin/expressCart/issues"
   },
   "overrides": {
-    "minimist@<=1.2.6": "1.2.6"
+    "minimist@<=1.2.6": "1.2.6",
+    "mpath@<=0.8.4": "0.8.4"
   }
 }
